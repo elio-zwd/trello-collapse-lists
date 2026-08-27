@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Collapsible Trello Lists",
+  "version": "2.0.0",
+  "description": "Collapse Trello lists in current Chrome. Collapse state is stored locally in Chrome.",
+  "permissions": [
+    "storage"
+  ],
+  "icons": {
+    "128": "manifest_v3/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://trello.com/*"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
